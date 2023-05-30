@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to the Great Number Game!</h1>
+            <p>I'm thinking of a number between 1 and 100</p>
+        </div>
+        <div class="guess">
+            <form action="{{ url_for('guess') }}" method="POST">
+                <input type="number" name="guess" placeholder="Can you guess it?">
+                <input type="submit" value="Submit">
+        </div>
+        <div class="reset">
+            <form action="{{ url_for('reset') }}">
+                <input type="submit" value="Try Again?">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
